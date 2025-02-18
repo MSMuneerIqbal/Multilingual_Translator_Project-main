@@ -6,7 +6,8 @@ import dotenv
 
 dotenv.load_dotenv()
 # Initialize LLM with Gemini model
-llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp", api_key=os.getenv("GEMINI_API_KEY"))
+api_key = st.secrets["GEMINI_API_KEY"]
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp", api_key=api_key)
 
 # App Title
 st.set_page_config(page_title="Multilingual Translator", layout="wide")
