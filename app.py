@@ -6,7 +6,7 @@ import dotenv
 
 dotenv.load_dotenv()
 # Initialize LLM with Gemini model
-api_key = st.secrets["GEMINI_API_KEY"]
+api_key = st.secrets["API_KEY"]
 llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp", api_key=api_key)
 
 # App Title
